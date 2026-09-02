@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  OrderItemsEnriched.xsd  —  ORIGEN del Message Mapping
+  Estructura que sale del Content Enricher: cada <Item> conserva su ProductID
+  y su Quantity, y recibe un <Product> con los datos maestros de Northwind.
+  El ProductID aparece dos veces: en Item (original) y en Item/Product (lookup).
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="unqualified"
+           attributeFormDefault="unqualified">
+
+  <xs:element name="OrderItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Item" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="ProductID" type="xs:string"/>
+
+              <xs:element name="Product" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="CategoryID"      type="xs:string" minOccurs="0"/>
+                    <xs:element name="Discontinued"    type="xs:string" minOccurs="0"/>
+                    <xs:element name="SupplierID"      type="xs:string" minOccurs="0"/>
+                    <xs:element name="UnitPrice"       type="xs:string" minOccurs="0"/>
+                    <xs:element name="ProductName"     type="xs:string" minOccurs="0"/>
+                    <xs:element name="QuantityPerUnit" type="xs:string" minOccurs="0"/>
+                    <xs:element name="UnitsOnOrder"    type="xs:string" minOccurs="0"/>
+                    <xs:element name="ProductID"       type="xs:string" minOccurs="0"/>
+                    <xs:element name="ReorderLevel"    type="xs:string" minOccurs="0"/>
+                    <xs:element name="UnitsInStock"    type="xs:string" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="Quantity" type="xs:string"/>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

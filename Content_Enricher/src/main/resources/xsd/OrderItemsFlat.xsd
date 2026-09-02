@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  OrderItemsFlat.xsd  —  DESTINO del Message Mapping
+  Estructura plana: un solo ProductID, sin nodo <Product> intermedio,
+  y solo los campos maestros que interesan al consumidor.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="unqualified"
+           attributeFormDefault="unqualified">
+
+  <xs:element name="OrderItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Item" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductID"       type="xs:string"/>
+              <xs:element name="Quantity"        type="xs:string"/>
+              <xs:element name="ProductName"     type="xs:string" minOccurs="0"/>
+              <xs:element name="UnitPrice"       type="xs:string" minOccurs="0"/>
+              <xs:element name="QuantityPerUnit" type="xs:string" minOccurs="0"/>
+              <xs:element name="UnitsInStock"    type="xs:string" minOccurs="0"/>
+              <xs:element name="Discontinued"    type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
