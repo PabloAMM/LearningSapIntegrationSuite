@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Namespace 'd' : propiedades de la entidad ZUSER_DETAILS_SRV.userdetails -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+           targetNamespace="http://schemas.microsoft.com/ado/2007/08/dataservices"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+    <!-- Edm.String (Key) -->
+    <xs:element name="Userid"       type="xs:string"/>
+    <!-- Edm.String -->
+    <xs:element name="Username"     type="xs:string"/>
+    <!-- Edm.String -->
+    <xs:element name="Emailid"      type="xs:string"/>
+    <!-- Edm.String -->
+    <xs:element name="Mobilenumber" type="xs:string"/>
+
+    <xs:group name="userdetailsProperties">
+        <xs:sequence>
+            <xs:element ref="d:Userid"       minOccurs="0"/>
+            <xs:element ref="d:Username"     minOccurs="0"/>
+            <xs:element ref="d:Emailid"      minOccurs="0"/>
+            <xs:element ref="d:Mobilenumber" minOccurs="0"/>
+        </xs:sequence>
+    </xs:group>
+
+</xs:schema>

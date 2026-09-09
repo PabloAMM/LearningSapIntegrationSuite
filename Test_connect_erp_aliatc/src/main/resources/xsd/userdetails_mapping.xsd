@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================
+     XSD plano para Message Mapping (solo campos de m:properties)
+     Sin namespace: facilita el mapeo y el XML->JSON converter.
+     Root: userdetailsSet
+     ============================================================ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+    <xs:element name="userdetailsSet">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="userdetails" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Userid"       type="xs:string" minOccurs="0"/>
+                            <xs:element name="Username"     type="xs:string" minOccurs="0"/>
+                            <xs:element name="Emailid"      type="xs:string" minOccurs="0"/>
+                            <xs:element name="Mobilenumber" type="xs:string" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
