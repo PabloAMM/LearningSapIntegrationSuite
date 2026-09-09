@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?><bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ifl="http:///com.sap.ifl.model/Ifl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1">
+    <bpmn2:collaboration id="Collaboration_1" name="Default Collaboration">
+        <bpmn2:extensionElements>
+            <ifl:property>
+                <key>namespaceMapping</key>
+                <value/>
+            </ifl:property>
+            <ifl:property>
+                <key>httpSessionHandling</key>
+                <value>None</value>
+            </ifl:property>
+            <ifl:property>
+                <key>accessControlMaxAge</key>
+                <value/>
+            </ifl:property>
+            <ifl:property>
+                <key>returnExceptionToSender</key>
+                <value>false</value>
+            </ifl:property>
+            <ifl:property>
+                <key>log</key>
+                <value>All events</value>
+            </ifl:property>
+            <ifl:property>
+                <key>corsEnabled</key>
+                <value>false</value>
+            </ifl:property>
+            <ifl:property>
+                <key>exposedHeaders</key>
+                <value/>
+            </ifl:property>
+            <ifl:property>
+                <key>componentVersion</key>
+                <value>1.2</value>
+            </ifl:property>
+            <ifl:property>
+                <key>allowedHeaderList</key>
+                <value/>
+            </ifl:property>
+            <ifl:property>
+                <key>ServerTrace</key>
+                <value>false</value>
+            </ifl:property>
+            <ifl:property>
+                <key>allowedOrigins</key>
+                <value/>
+            </ifl:property>
+            <ifl:property>
+                <key>accessControlAllowCredentials</key>
+                <value>false</value>
+            </ifl:property>
+            <ifl:property>
+                <key>allowedHeaders</key>
+                <value/>
+            </ifl:property>
+            <ifl:property>
+                <key>allowedMethods</key>
+                <value/>
+            </ifl:property>
+            <ifl:property>
+                <key>cmdVariantUri</key>
+                <value>ctype::IFlowVariant/cname::IFlowConfiguration/version::1.2.4</value>
+            </ifl:property>
+        </bpmn2:extensionElements>
+        <bpmn2:participant id="Participant_2" ifl:type="EndpointRecevier" name="DataStore">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>ifl:type</key>
+                    <value>EndpointRecevier</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+        </bpmn2:participant>
+        <bpmn2:participant id="Participant_Process_1" ifl:type="IntegrationProcess" name="Integration Process" processRef="Process_1">
+            <bpmn2:extensionElements/>
+        </bpmn2:participant>
+        <bpmn2:messageFlow id="MessageFlow_11" name="ProcessDirect" sourceRef="EndEvent_2" targetRef="Participant_2">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>ComponentType</key>
+                    <value>ProcessDirect</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>Description</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>address</key>
+                    <value>/Pattern/DataStore</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentNS</key>
+                    <value>sap</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>Vendor</key>
+                    <value>SAP</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>Name</key>
+                    <value>ProcessDirect</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>TransportProtocolVersion</key>
+                    <value>1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentSWCVName</key>
+                    <value>external</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>system</key>
+                    <value>DataStore</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>TransportProtocol</key>
+                    <value>Not Applicable</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::AdapterVariant/cname::ProcessDirect/vendor::SAP/tp::Not Applicable/mp::Not Applicable/direction::Receiver/version::1.1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>MessageProtocol</key>
+                    <value>Not Applicable</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>MessageProtocolVersion</key>
+                    <value>1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentSWCVId</key>
+                    <value>1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>direction</key>
+                    <value>Receiver</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+        </bpmn2:messageFlow>
+    </bpmn2:collaboration>
+    <bpmn2:process id="Process_1" name="Integration Process">
+        <bpmn2:extensionElements>
+            <ifl:property>
+                <key>transactionTimeout</key>
+                <value>30</value>
+            </ifl:property>
+            <ifl:property>
+                <key>componentVersion</key>
+                <value>1.2</value>
+            </ifl:property>
+            <ifl:property>
+                <key>cmdVariantUri</key>
+                <value>ctype::FlowElementVariant/cname::IntegrationProcess/version::1.2.1</value>
+            </ifl:property>
+            <ifl:property>
+                <key>transactionalHandling</key>
+                <value>Not Required</value>
+            </ifl:property>
+        </bpmn2:extensionElements>
+        <bpmn2:endEvent id="EndEvent_2" name="End">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_9</bpmn2:incoming>
+            <bpmn2:messageEventDefinition/>
+        </bpmn2:endEvent>
+        <bpmn2:callActivity id="CallActivity_8" name="Content Modifier ">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>bodyType</key>
+                    <value>constant</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>propertyTable</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>headerTable</key>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;ModelingBasics-CsvToXml&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;context&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>wrapContent</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.6</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Enricher</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::Enricher/version::1.6.5</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_6</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_9</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:callActivity id="CallActivity_15" name="CSV">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>bodyType</key>
+                    <value>constant</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>propertyTable</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>headerTable</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>wrapContent</key>
+                    <value>Category;ProductId;DimensionWidth;WeightUnit;DimensionUnit;DimensionHeight;DimensionDepth;Weight;Name
+Computer system accessories;AD-1000;0.4600;KG;m;0.0300;0.3000;0.010;Flyer
+Notebooks;HT-1000;0.3200;KG;m;0.0300;0.1800;4.200;Notebook Basic 15
+Notebooks;HT-1001;0.2900;KG;m;0.0310;0.1700;4.500;Notebook Basic 17
+Notebooks;HT-1002;0.2800;KG;m;0.0250;0.1900;4.200;Notebook Basic 18
+Notebooks;HT-1003;0.3200;KG;m;0.0400;0.2100;4.200;Notebook Basic 19
+PDAs/Organizers;HT-1007;0.3200;KG;m;0.0300;0.2200;0.200;1UMTS PDA
+Notebooks;HT-1010;0.3300;KG;m;0.0300;0.2000;4.300;Notebook Professional 15
+Notebooks;HT-1011;0.3300;KG;m;0.0200;0.2300;4.100;Notebook Professional 17
+PDAs/Organizers;HT-1020;0.1000;KG;m;0.1700;0.0180;0.160;Easy Hand III
+PDAs/Organizers;HT-1021;0.1100;KG;m;0.1800;0.0170;0.180;Easy Hand V
+PDAs/Organizers;HT-1022;0.8400;KG;m;0.1400;0.0150;0.200;Easy Hand VII
+PDAs/Organizers;HT-1023;0.8000;KG;m;0.1300;0.0160;0.800;Easy Power
+Flat screens;HT-1030;0.3700;KG;m;0.3600;0.1200;18.000;Ergo Screen
+Flat screens;HT-1031;0.4080;KG;m;0.4300;0.1900;22.000;Easy Pixel
+Flat screens;HT-1032;0.4080;KG;m;0.4300;0.1900;21.000;Beam Screen
+Flat screens;HT-1035;0.3900;KG;m;0.4100;0.2000;14.000;Flat Basic 15
+Flat screens;HT-1036;0.4500;KG;m;0.4600;0.2600;15.000;Flat Future
+Flat screens;HT-1037;0.5450;KG;m;0.3910;0.2210;17.000;Flat X-large
+Laser printers;HT-1040;0.5100;KG;m;0.3000;0.4600;32.000;Laser Professional Eco
+Laser printers;HT-1041;0.4800;KG;m;0.2600;0.4200;23.000;Laser Basic
+Laser printers;HT-1042;0.5300;KG;m;0.6500;0.5000;15.000;Laser Allround
+Ink jet printers;HT-1050;0.4500;KG;m;0.1800;0.3420;3.000;Deskjet Super Color
+Ink jet printers;HT-1051;0.4600;KG;m;0.2500;0.3200;1.900;Deskjet Mobile
+Ink jet printers;HT-1052;0.4100;KG;m;0.2800;0.4200;18.000;Deskjet Super Highspeed
+Multifunction printers;HT-1055;0.5500;KG;m;0.2900;0.4500;6.300;Multi Print
+Multifunction printers;HT-1056;0.5100;KG;m;0.2200;0.4130;4.300;Multi Color
+Mice;HT-1060;0.0600;KG;m;0.0350;0.1450;0.090;Cordless Mouse
+Mice;HT-1061;0.0700;KG;m;0.0310;0.1500;0.090;Speed Mouse
+Mice;HT-1062;0.0710;KG;m;0.0400;0.1400;0.030;Track Mouse
+Keyboards;HT-1063;0.5000;KG;m;0.0350;0.2100;2.100;Ergonomic Keyboard
+Keyboards;HT-1064;0.5200;KG;m;0.0300;0.2500;1.800;Internet Keyboard
+Keyboards;HT-1065;0.5140;KG;m;0.0400;0.2300;2.300;Media Keyboard
+Mousepads;HT-1066;0.3000;G;m;0.0050;0.3000;80.000;Mousepad
+Mousepads;HT-1067;0.2800;G;m;0.0040;0.2200;150.000;Ergo Mousepad
+Mousepads;HT-1068;0.2400;G;m;0.0060;0.2400;150.000;Designer Mousepad
+Flat screens;HT-1069;0.3200;G;m;0.2300;0.0020;170.000;Notebook LCD Display
+Graphic cards;HT-1070;0.1500;KG;m;0.0450;0.1800;0.010;Proctra X
+Graphic cards;HT-1071;0.1400;KG;m;0.0350;0.1750;0.012;Gladiator MX
+Graphic cards;HT-1072;0.1500;KG;m;0.0310;0.1680;0.013;Hurricane GX
+Graphic cards;HT-1073;0.1520;KG;m;0.0410;0.1720;0.010;Psimax
+Scanners;HT-1080;0.3400;KG;m;0.0500;0.4800;2.300;Photo Scan
+Scanners;HT-1081;0.3100;KG;m;0.0700;0.4300;2.400;Power Scan
+Scanners;HT-1082;0.3300;KG;m;0.1200;0.4100;3.200;Jet Scan Professional
+Scanners;HT-1083;0.3500;KG;m;0.1000;0.4000;3.200;Jet Scan Professional
+Multifunction printers;HT-1085;0.4500;KG;m;0.2200;0.4200;23.200;Copymaster
+Speakers;HT-1090;0.1200;KG;m;0.1600;0.1000;3.000;Surround Sound
+Speakers;HT-1091;0.1300;KG;m;0.1750;0.1100;1.400;Blaster Extreme
+Speakers;HT-1092;0.1240;KG;m;0.1810;0.1040;2.100;Sound Booster
+Headsets;HT-1095;0.2400;G;m;0.2300;0.0190;187.000;Lovely Sound 5.1 Wireless
+Headsets;HT-1096;0.2500;G;m;0.1900;0.0170;130.000;Lovely Sound 5.1
+Headsets;HT-1097;0.2130;G;m;0.1970;0.0240;60.000;Lovely Sound Stereo
+Software;HT-1100;0.1500;KG;m;0.2100;0.0650;1.200;Smart Office
+Software;HT-1101;0.1400;KG;m;0.2400;0.0670;0.800;Smart Design
+Software;HT-1102;0.1600;KG;m;0.2700;0.0600;0.800;Smart Network
+Software;HT-1103;0.1100;KG;m;0.2200;0.0340;0.800;Smart Multimedia
+Software;HT-1104;0.1000;KG;m;0.3000;0.0300;1.100;Smart Games
+Software;HT-1105;0.1600;KG;m;0.2100;0.0400;0.700;Smart Internet Antivirus
+Software;HT-1106;0.1790;KG;m;0.2310;0.0420;0.900;Smart Firewall
+Software;HT-1107;0.1200;KG;m;0.1900;0.0150;0.500;Smart Money
+Computer system accessories;HT-1110;0.2000;KG;m;0.0430;0.0800;0.030;PC Lock
+Computer system accessories;HT-1111;0.3100;KG;m;0.0700;0.0900;0.020;Notebook Lock
+Computer system accessories;HT-1112;0.0900;KG;m;0.0130;0.0820;0.500;Web cam reality
+Computer system accessories;HT-1113;0.1800;KG;m;0.0090;0.2200;0.200;Screen clean
+Computer system accessories;HT-1114;0.5100;KG;m;0.3500;0.1900;1.800;Leather bag professional
+Telecommunication;HT-1115;0.1930;KG;m;0.1200;0.1800;1.300;Modem Hyper Speed
+Telecommunication;HT-1116;0.1900;KG;m;0.1400;0.2100;0.300;ISDN direct
+Telecommunication;HT-1117;0.1190;KG;m;0.1050;0.2410;0.400;ADSL progress T1
+Computer system accessories;HT-1118;0.0150;KG;m;0.0120;0.0870;0.015;USB Stick 1 GB
+Computer system accessories;HT-1119;0.0200;G;m;0.0390;0.0310;88.000;USB Stick 2 GB
+Keyboards;HT-1120;0.4500;KG;m;0.0320;0.1940;1.000;Keybord, english international
+Flat screens;HT-1137;0.5400;KG;m;0.3800;0.2200;18.000;Flat X-large II
+Flat screens;HT-1138;0.5300;KG;m;0.4400;0.2000;4.200;Flat XL
+PCs;HT-1210;0.2800;KG;m;0.4300;0.3100;2.300;PC Power Station
+Servers;HT-1500;0.3400;KG;m;0.2300;0.3500;18.000;Server Basic
+Servers;HT-1501;0.2900;KG;m;0.2700;0.3000;25.000;Server Professional
+Servers;HT-1502;0.2200;KG;m;0.3700;0.2730;35.000;Server Power Pro
+PCs;HT-1600;0.2140;KG;m;0.3800;0.2900;4.800;Family PC Basic
+PCs;HT-1601;0.2500;KG;m;0.4020;0.3170;5.300;Family PC Pro
+PCs;HT-1602;0.2650;KG;m;0.4700;0.3400;5.900;Gaming Monster
+PCs;HT-1603;0.2700;KG;m;0.4200;0.2800;6.800;Gaming Monster Pro
+Portable Players;HT-2000;0.2140;KG;m;0.2760;0.1900;0.790;7 inch Widescreen Portable DVD Player w MP3
+Portable Players;HT-2001;0.2400;KG;m;0.2900;0.1950;0.840;10 inch Portable DVD player
+Portable Players;HT-2002;0.2100;KG;m;0.1400;0.1650;0.720;Portable DVD Player with 9 inch LCD Monitor
+Computer system accessories;HT-2025;0.6700;KG;m;0.2500;0.2300;0.650;CD/DVD case: 264 capacity
+Computer system accessories;HT-2026;0.2100;KG;m;0.1300;0.1020;0.200;Audio/Video Cable Kit - 12 ft
+Computer system accessories;HT-2027;0.0550;KG;m;0.0200;0.0200;0.150;Removable CD/DVD Laser Labels
+Beamers;HT-6100;0.1800;KG;m;0.1200;0.1500;1.700;Beam Breaker B-1
+Beamers;HT-6101;0.3200;KG;m;0.1800;0.2100;2.000;Beam Breaker B-2
+Beamers;HT-6102;0.3040;KG;m;0.2300;0.2310;2.500;Beam Breaker B-3
+Portable Players;HT-6110;0.3700;KG;m;0.0600;0.2400;2.400;Play Movie
+Portable Players;HT-6111;0.3800;KG;m;0.0620;0.2600;3.100;Record Movie
+MP3-Players;HT-6120;0.0500;G;m;0.0600;0.0180;134.000;Basic Booster A
+MP3-Players;HT-6121;0.0510;G;m;0.0920;0.0140;134.000;Basic Booster B
+MP3-Players;HT-6122;0.0760;G;m;0.0840;0.0200;266.000;Power Pro Player 40
+MP3-Players;HT-6123;0.1300;G;m;0.1430;0.0180;267.000;Power Pro Player 80
+TV flat screens;HT-6130;0.7800;KG;m;0.5500;0.2210;2.600;Flat Watch HD32
+TV flat screens;HT-6131;0.9910;KG;m;0.6100;0.2600;2.200;Flat Watch HD37
+TV flat screens;HT-6132;12.800;KG;m;0.7910;0.2300;1.800;Flat Watch HD41
+PDAs/Organizers;HT-7000;0.0810;KG;m;0.1210;0.1300;0.500;Copperberry
+PDAs/Organizers;HT-7010;0.0700;KG;m;0.1300;0.1500;0.500;Silverberry
+PDAs/Organizers;HT-7020;0.0740;KG;m;0.1120;0.1620;0.500;Goldberry
+PDAs/Organizers;HT-7030;0.0860;KG;m;0.1040;0.1540;0.500;Platinberry
+Notebooks;HT-8000;0.3100;KG;m;0.0310;0.1900;4.000;ITelO FlexTop I4000
+Notebooks;HT-8001;0.3200;KG;m;0.0340;0.2000;4.200;ITelO FlexTop I6300c
+Notebooks;HT-8002;0.3800;KG;m;0.0410;0.2100;3.500;ITelO FlexTop I9100
+Notebooks;HT-8003;0.4800;KG;m;0.0450;0.3100;3.800;ITelO FlexTop I9800</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.6</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Enricher</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::Enricher/version::1.6.5</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_13</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_16</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:startEvent id="StartEvent_12" name="Start Timer 1">
+            <bpmn2:outgoing>SequenceFlow_13</bpmn2:outgoing>
+            <bpmn2:timerEventDefinition id="TimerEventDefinition_55781">
+                <bpmn2:extensionElements>
+                    <ifl:property>
+                        <key>scheduleKey</key>
+                        <value>&lt;row&gt;&lt;cell&gt;dateType&lt;/cell&gt;&lt;cell&gt;SIMPLE&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;hourValue&lt;/cell&gt;&lt;cell&gt;17&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;minutesValue&lt;/cell&gt;&lt;cell&gt;44&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;timeType&lt;/cell&gt;&lt;cell&gt;ON_TIME&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;timeZone&lt;/cell&gt;&lt;cell&gt;( UTC 0:00 ) Greenwich Mean Time(Etc/GMT)&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;throwExceptionOnExpiry&lt;/cell&gt;&lt;cell&gt;true&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;second&lt;/cell&gt;&lt;cell&gt;0&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;minute&lt;/cell&gt;&lt;cell&gt;0/17&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;hour&lt;/cell&gt;&lt;cell&gt;*&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;day_of_month&lt;/cell&gt;&lt;cell&gt;?&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;month&lt;/cell&gt;&lt;cell&gt;*&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;dayOfWeek&lt;/cell&gt;&lt;cell&gt;*&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;year&lt;/cell&gt;&lt;cell&gt;*&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;startAt&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;endAt&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;attributeBehaviour&lt;/cell&gt;&lt;cell&gt;isThrowExceptionOnExpiryVisible,isScheduleAdvancedVisible,isScheduleAdvancedStartEndVisible,isScheduleSimpleVisible&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;triggerType&lt;/cell&gt;&lt;cell&gt;cron&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;noOfSchedules&lt;/cell&gt;&lt;cell&gt;1&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;schedule1&lt;/cell&gt;&lt;cell&gt;simple.repeat=NONE&amp;amp;trigger.timeZone=Etc/GMT&lt;/cell&gt;&lt;/row&gt;</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>componentVersion</key>
+                        <value>1.4</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>cmdVariantUri</key>
+                        <value>ctype::FlowstepVariant/cname::intermediatetimer/version::1.4.0</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>activityType</key>
+                        <value>StartTimerEvent</value>
+                    </ifl:property>
+                </bpmn2:extensionElements>
+            </bpmn2:timerEventDefinition>
+        </bpmn2:startEvent>
+        <bpmn2:callActivity id="CallActivity_5" name="CSV to XML Converter">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>Field_Separator_in_CSV</key>
+                    <value>;</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ignoreFirstLineAsHeader</key>
+                    <value>true</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>XML_Schema_File_Path</key>
+                    <value>/xsd/Products.xsd</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>headerMapping</key>
+                    <value>mapHeadersToXSD</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>Record_Identifier_in_CSV</key>
+                    <value>Notebooks</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.4</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>CsvToXmlConverter</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::CsvToXmlConverter/version::1.4.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>XPath_Field_Location</key>
+                    <value>Products/Product</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_16</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_6</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:sequenceFlow id="SequenceFlow_9" sourceRef="CallActivity_8" targetRef="EndEvent_2"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_16" sourceRef="CallActivity_15" targetRef="CallActivity_5"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_13" sourceRef="StartEvent_12" targetRef="CallActivity_15"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6" sourceRef="CallActivity_5" targetRef="CallActivity_8"/>
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
+        <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
+            <bpmndi:BPMNShape bpmnElement="EndEvent_2" id="BPMNShape_EndEvent_2">
+                <dc:Bounds height="32.0" width="32.0" x="986.0" y="138.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="StartEvent_12" id="BPMNShape_StartEvent_12">
+                <dc:Bounds height="32.0" width="32.0" x="333.0" y="142.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_8" id="BPMNShape_CallActivity_8">
+                <dc:Bounds height="60.0" width="100.0" x="850.0" y="124.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_5" id="BPMNShape_CallActivity_5">
+                <dc:Bounds height="60.0" width="100.0" x="667.0" y="124.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Participant_2" id="BPMNShape_Participant_2">
+                <dc:Bounds height="140.0" width="100.0" x="1125.0" y="84.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Participant_Process_1" id="BPMNShape_Participant_Process_1">
+                <dc:Bounds height="188.0" width="856.0" x="246.0" y="60.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_15" id="BPMNShape_CallActivity_15">
+                <dc:Bounds height="60.0" width="100.0" x="453.0" y="132.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_9" id="BPMNEdge_SequenceFlow_9" sourceElement="BPMNShape_CallActivity_8" targetElement="BPMNShape_EndEvent_2">
+                <di:waypoint x="900.0" xsi:type="dc:Point" y="154.0"/>
+                <di:waypoint x="1002.0" xsi:type="dc:Point" y="154.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_6" id="BPMNEdge_SequenceFlow_6" sourceElement="BPMNShape_CallActivity_5" targetElement="BPMNShape_CallActivity_8">
+                <di:waypoint x="717.0" xsi:type="dc:Point" y="154.0"/>
+                <di:waypoint x="900.0" xsi:type="dc:Point" y="154.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_16" id="BPMNEdge_SequenceFlow_16" sourceElement="BPMNShape_CallActivity_15" targetElement="BPMNShape_CallActivity_5">
+                <di:waypoint x="503.0" xsi:type="dc:Point" y="162.0"/>
+                <di:waypoint x="610.0" xsi:type="dc:Point" y="162.0"/>
+                <di:waypoint x="610.0" xsi:type="dc:Point" y="154.0"/>
+                <di:waypoint x="717.0" xsi:type="dc:Point" y="154.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_13" id="BPMNEdge_SequenceFlow_13" sourceElement="BPMNShape_StartEvent_12" targetElement="BPMNShape_CallActivity_15">
+                <di:waypoint x="349.0" xsi:type="dc:Point" y="160.0"/>
+                <di:waypoint x="503.0" xsi:type="dc:Point" y="160.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="MessageFlow_11" id="BPMNEdge_MessageFlow_11" sourceElement="BPMNShape_EndEvent_2" targetElement="BPMNShape_Participant_2">
+                <di:waypoint x="1002.0" xsi:type="dc:Point" y="154.0"/>
+                <di:waypoint x="1175.0" xsi:type="dc:Point" y="154.0"/>
+            </bpmndi:BPMNEdge>
+        </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+</bpmn2:definitions>
